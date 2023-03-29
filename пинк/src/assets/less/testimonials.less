@@ -1,0 +1,150 @@
+// main: styles.less
+
+.testimonials {
+    width: 100%;
+    margin-top: -43px;
+    background-color: white;
+    z-index: 3;
+    position: relative;
+    padding: 41px 20px 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 57px;
+
+    @media (min-width: @tablet-width) {
+        margin-top: 0;
+        margin-bottom: 117px;
+        padding: 0 20px 3px 20px;
+    }
+
+    @media (min-width: @desk-width) {
+        margin-bottom: 33px;
+        padding: 184px 130px 0 130px;
+    }
+
+    &::before {
+        @media (min-width: @desk-width) {
+            position: absolute;
+            width: 79px;
+            height: 63px;
+            top: 72px;
+            left: 50%;
+            content: "";
+            transform: translateX(-39px);
+            background-image: url(/assets/images/quotes.svg);
+        }
+    }
+}
+
+.testimonials__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+    margin-bottom: 31px;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 39px;
+    }
+
+    @media (min-width: @desk-width) {
+        width: 72%;
+    }
+}
+
+.slider-buttons__wrapper {
+    display: none;
+
+    @media (min-width: @desk-width) {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        position: absolute;
+        top: 213px;
+    }
+}
+
+.slider--button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    & .slider-button__icon {
+        opacity: 0.3;
+    }
+    &:hover .slider-button__icon {
+        opacity: 0.6;
+    } 
+    &:active .slider-button__icon {
+        opacity: 0.1;
+    }
+}
+
+.testimonials--name {
+    order: -1;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 13px;
+
+    @media (min-width: @tablet-width) {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    @media (min-width: @desk-width) {
+        font-size: 24px;
+        margin-bottom: 2px;
+    }
+}
+
+.testimonials-cite {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 30px;
+    min-width: 280px;
+    width: 100%;
+
+    @media (min-width: @tablet-width) {
+        order: -2;
+        margin-bottom: 35px;
+    }
+}
+
+.testimonials--supl-info {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+    }
+    @media (min-width: @desk-width) {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+.slider-toggle__list {
+    .slider-list ()
+}
+
+.slider-toggle__item {
+    .slider-item ();
+}
+
+.slider-toggle__button {
+    .slider-button ();
+}

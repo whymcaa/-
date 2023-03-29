@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/OpenSans-Regular.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/OpenSans-Bold.ttf");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    font-style: normal;
+    font-weight: 300;
+    src: url("/assets/fonts/OpenSans-Light.ttf");
+    font-display: swap;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: @text-primary;
+        @media (min-width: @tablet-width) {
+            font-size: 18px;
+            line-height: 30px;
+        }
+}
+
+@import url("vars.less");
+@import url("header.less");
+@import url("mixins.less");
+@import url("index-hero.less");
+@import url("advantages.less");
+@import url("research.less");
+@import url("testimonials.less");
+@import url("prices.less");
+@import url("contacts.less");
+@import url("footer.less");
+@import url("form-hero.less");
+@import url("catalog-hero.less");
+@import url("catalog-gallery.less");
+@import url("form.less");
+@import url("post.less");
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+// footer-logo
+
+.footer__logo--glasses {
+    @media (min-width: @desk-width) {
+        display: none;
+    }
+}
+
+.footer__logo-glasses--desk {
+    display: none;
+    @media (min-width: @desk-width) {
+        display: block;
+    }
+}
+
+.footer__logo--decoration {
+    display: none;
+    @media (min-width: @desk-width) {
+        display: block;
+    }
+}
+

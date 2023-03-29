@@ -1,0 +1,346 @@
+// main: styles.less
+
+.post {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 39px;
+
+    @media (min-width: @tablet-width) {
+        padding-top: 64px;
+    }
+
+    @media (min-width: @desk-width) {
+        padding: 108px 130px 0 130px;
+    }
+}
+
+.post__title {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0 auto;
+    min-width: 280px;
+    width: 87.5%;
+    margin-bottom: 43px;
+
+    @media (min-width: @tablet-width) {
+        font-size: 18px;
+        margin-bottom: 70px;
+    }
+}
+
+.post__container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: @gray;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: @tablet-width) {
+        flex-direction: row;
+        padding: 57px 33px 54px 33px;
+        justify-content: space-between;
+    }
+
+    @media (min-width: @desk-width) {
+        padding: 57px 90px 57px 80px;
+    }
+}
+
+.post__image {
+    display: block;
+    margin: 0;
+    padding: 0;
+    object-fit: fill;
+    width: 100%;
+    height: auto;
+    margin-bottom: 42px;
+
+    @media (min-width: @tablet-width) {
+        margin: 0;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.settings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: @tablet-width) {
+        min-width: 260px;
+        width: 40%;
+        display: grid;
+        grid-template-columns: 8% 80%;
+        column-gap: 12%;
+        row-gap: 12%;
+    }
+
+    @media (min-width: @desk-width) {
+        grid-template-columns: 11% 85%;
+        column-gap: 8%;
+    }
+}
+
+.settings-btns {
+    display: flex;
+    min-width: 194px;
+    width: 60%;
+    justify-content: space-between;
+    margin-bottom: 39px;
+
+    @media (min-width: @tablet-width) {
+        margin: 0;
+        grid-column: 1/2;
+        flex-direction: column;
+        width: 100%;
+        min-width: 22px;
+        align-items: center;
+    }
+}
+
+.settings__button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+        padding-bottom: 24px;
+        width: 30px;
+        height: 46px;
+        box-sizing: border-box;
+    }
+
+    @media (min-width: @desk-width) {
+        width: 48px;
+        height: 60px;
+        padding-bottom: 14px;
+    }
+
+    &::after {
+        @media (min-width: @tablet-width) {
+            content: "";
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 1076%;
+            background-color: rgba(40, 54, 69, 0.1);
+            position: absolute;
+            z-index: 5;
+        }
+
+        @media (min-width: @desk-width) {
+            width: 760%;
+        }
+    }
+
+    &:last-of-type::after {
+        @media (min-width: @desk-width) {
+            display: none;
+        }
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 25px;
+
+        @media (min-width: @desk-width) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &:first-of-type .settings-button__icon {
+        @media (min-width: @tablet-width) {
+            width: 22px;
+            height: 22px;
+        }
+
+        @media (min-width: @desk-width) {
+            width: 44px;
+            height: 44px;
+        }
+    }
+
+    &:nth-of-type(2) .settings-button__icon {
+        @media (min-width: @tablet-width) {
+            width: 24px;
+            height: 22px;
+        }
+
+        @media (min-width: @desk-width) {
+            width: 48px;
+            height: 43px;
+        }
+    }
+
+    &:nth-of-type(3) .settings-button__icon {
+        @media (min-width: @tablet-width) {
+            width: 16px;
+            height: 16px;
+        }
+
+        @media (min-width: @desk-width) {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+}
+
+.settings-button__icon {
+    fill: rgba(40, 54, 69, 0.3);
+
+    @media (min-width: @tablet-width) {
+        fill: @pink;
+    }    
+
+    .settings__button:hover & {
+        fill: rgba(40, 54, 69, 0.5);
+        @media (min-width: @tablet-width) {
+            fill: @pink;
+        }
+    }
+    .settings__button:active & {
+        fill: @pink;
+    }
+}
+
+.range__container {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 34px;
+
+    @media (min-width: @tablet-width) {
+        grid-column: 2/3;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 19px;
+    }
+
+    @media (min-width: @desk-width) {
+        padding-top: 21px;
+    }
+}
+
+.range {
+    width: 100%;
+    background-color: @text-primary;
+    height: 2px;
+    position: relative;
+
+    &:not(:first-of-type) {
+        display: none;
+
+        @media (min-width: @tablet-width) {
+            display: block;
+        }
+    }
+
+    &:not(:last-of-type) {
+        @media (min-width: @tablet-width) {
+            margin-bottom: 71px;
+        }
+    }
+}
+
+.range-toggle__button {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid @pink;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 33px;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    &:active {
+        background-color: @pink;
+    }
+}
+
+.post__btns {
+    padding-top: 38px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -20px;
+        right: -20px;
+        background-color: rgba(40, 54, 69, 0.1);
+        height: 1px;
+
+        @media (min-width: @tablet-width) {
+            display: none;
+        }
+    }
+
+    @media (min-width: @tablet-width) {
+        grid-column: 1/-1;
+        width: 100%;
+        padding-top: 0;
+    }
+}
+
+.post__button {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 18px 0;
+    background-color: transparent;
+    border: 3px solid @pink;
+    border-radius: 30px;
+    color: @pink;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 12px;
+
+    &:hover {
+        background-color: @pink;
+        color: white;
+    }
+
+    &:active {
+        background-color: @pink;
+        color: rgba(255, 255, 255, 0.3);
+    }
+}
+
+.reset__changes {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 18px 0;
+    background-color: transparent;
+    border: 3px solid rgba(40, 54, 69, 0.1);
+    border-radius: 30px;
+    color: rgba(40, 54, 69, 0.1);
+    font-weight: 700;
+    cursor: pointer;
+
+    &:hover {
+        border-color: rgba(40, 54, 69, 0.3);
+        color: rgba(40, 54, 69, 0.3);
+    }
+    &:active {
+        background-color: rgba(40, 54, 69, 0.3);
+        border-color: transparent;
+        color: rgba(255, 255, 255, 0.3);
+    }
+}

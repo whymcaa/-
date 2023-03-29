@@ -1,0 +1,45 @@
+// main: styles.less
+
+.form-hero {
+    width: 100%;
+    position: relative;
+    height: 171px;
+
+    @media (min-width: @tablet-width) {
+        height: 332px;
+    }
+}
+
+.form-hero__bg {
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    top: -66px;
+    z-index: -1;
+    height: 462px;
+
+    @media (min-width: @tablet-width) {
+        height: 432px;
+        top: -110px;
+    }
+}
+
+.form-hero__title {
+    margin: 0;
+    padding: 0;
+    .title ();
+    color: white;
+}
+
+.form-hero__container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 29px 46px 0 29px;
+
+    @media (min-width: @tablet-width) {
+        padding: 66px 85px 0 85px;
+    }
+}

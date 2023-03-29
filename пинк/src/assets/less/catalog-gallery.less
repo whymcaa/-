@@ -1,0 +1,251 @@
+// main: styles.less
+
+.catalog-gallery {
+    width: 100%;
+    padding-top: 44px;
+
+    @media (min-width: @tablet-width) {
+        padding-top: 91px;
+    }
+}
+
+.catalog-gallery__title {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    display: block;
+    min-width: 258px;
+    width: 80%;
+    margin-bottom: 50px;
+
+    @media (min-width: @tablet-width) {
+        font-size: 18px;
+        margin-bottom: 77px;
+    }
+}
+
+// picture-of-the-day
+
+.picture-of-the-day {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 50px;
+    }
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 37px;
+    }
+
+    &::before {
+        content: "ПАНОРАМА ДНЯ";
+        position: absolute;
+        padding: 6px 20px;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 24px;
+        background-color: @pink;
+        top: 1.5px;
+        right: 20px;
+
+        @media (min-width: @tablet-width) {
+            top: 57px;
+        }
+
+        @media (min-width: @desk-width) {
+            top: 54px;
+            right: 130px;
+        }
+    }
+}
+
+.picture-of-the-day__img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+// picture-of-the-day__comment
+
+.picture-of-the-day__comment {
+    min-width: 280px;
+    box-sizing: border-box;
+    width: 87.5%;
+    padding: 18px 10px 18px 17px;
+    background-color: @gray;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100%);
+
+    @media (min-width: @tablet-width) {
+        padding: 23px 30px 26px 30px;
+        grid-template-columns: repeat(auto-fill, 50%);
+        grid-template-rows: repeat(auto-fill, auto);
+        min-width: 620px;
+        width: 94%;
+    }
+
+    @media (min-width: @desk-width) {
+        min-width: 940px;
+        width: 78%;
+        padding: 24px 31px 13px 27px;
+    }
+}
+
+.comment__author {
+    display: flex;
+    align-items: baseline;
+}
+
+.picture-of-the-day__comment-author {
+    grid-column: 1/2;
+}
+
+.comment-author__name {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: 3px;
+}
+
+.comment-author__time {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+
+.comment__text {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 17px;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 0;
+    }
+    
+}
+
+.picture-of-the-day__comment-text {
+    grid-column: 1/-1;
+}
+
+.like-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: baseline;
+    cursor: pointer;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+        margin-top: auto;
+        justify-content: space-between;
+    }
+}
+
+.picture-of-the-day__like-button {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+}
+
+.like-button__svg {
+    margin-right: 18px;
+
+    @media (min-width: @tablet-width) {
+        margin-right: 0;
+        order: 2;
+        margin-left: 16px;
+    }
+}
+
+.like-button__counter {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 24px;
+    color: @pink;
+}
+
+// gallery-container
+
+.gallery-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100%);
+    row-gap: 20px;
+
+    @media (min-width: @tablet-width) {
+        grid-template-columns: repeat(auto-fill, 48%);
+        column-gap: 4%;
+        row-gap: 1,4%;
+        grid-template-rows: repeat(auto-fill, minmax(455px, auto));
+    }
+
+    @media (min-width: @desk-width) {
+        padding: 0;
+        min-width: 940px;
+        width: 78%;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fill, 30.5%);
+        column-gap: 4.2%;
+        row-gap: 4.6%;
+    }
+}
+
+.gallery__item {
+    width: 100%;
+    
+    @media (min-width: @tablet-width) {
+        min-height: 455px;
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.gallery__img {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.post-comment {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 10px 19px 17px;
+    background-color: @gray;
+
+    @media (min-width: @tablet-width) {
+        padding: 23px 30px 24px 30px;
+        min-height: 155px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (min-width: @desk-width) {
+        height: 100%;
+    }
+}
+
+
+

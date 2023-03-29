@@ -1,0 +1,76 @@
+// main: styles.less
+
+.research {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        width: 100%;
+        background-color: white;
+        margin-top: -70px;
+        position: relative;
+        box-sizing: border-box;
+        padding: 58px 20px 0 20px;
+        margin-bottom: 100px;
+    }
+
+    @media (min-width: @desk-width) {
+        margin-top: -10px;
+        background-color: @gray;
+        padding: 17px 130px 67px 130px;
+        margin-bottom: 0;
+    }
+}
+
+.research__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.research__info {
+    min-width: 350px;
+    max-width: 50%;
+    @media (min-width: @desk-width) {
+        min-width: 534px;
+        max-width: 58%;
+    }
+}
+
+.research--title {
+    color: black;
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 11px;
+    @media (min-width: @desk-width) {
+        line-height: 30px;
+        margin-bottom: 26px;
+    }
+}
+
+.research--desc {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+    @media (min-width: @desk-width) {
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+.research--link {
+    font-size: 14px;
+    line-height: 24px;
+    color: @pink;
+    text-decoration: underline;
+    @media (min-width: @desk-width) {
+        font-size: 18px;
+        line-height: 30xp;
+    }
+}
